@@ -10,12 +10,12 @@
     <title>Shopping Home</title>
   </head>
   <body>
-    <h1>My Shopping Home</h1>
+    <h1 onmouseover="titolo()" onmouseout="titleSelect()">My Shopping Home</h1>
     <div class="content">
       <div class="content--item">
         <img src="./assets/galaxy-z-fold5.jpg" alt="Galaxy Z Fold 5" />
         <p>Galaxy Z Fold 5 <br />512GB | 12GB</p>
-        <p>1.388,00€</p>
+        <p class="prezzo">1.388,00€</p>
         <a
           href="https://www.amazon.it/SAMSUNG-Galaxy-Fold5-512-Nero/dp/B0CCYM6WKG?ufe=app_do%3Aamzn1.fos.9d4f9b77-768c-4a4e-94ad-33674c20ab35"
           >Acquista</a
@@ -24,7 +24,7 @@
       <div class="content--item">
         <img src="./assets/HUAWEI Mate 50 Pro.jpg" alt="Huawei Mate 50 Pro" />
         <p>Huawei Mate 50 Pro <br />256GB | 8GB</p>
-        <p>929,99€</p>
+        <p onmouseover="prezzoChange()">929,99€</p>
         <a
           href="https://www.amazon.it/HUAWEI-fotocamera-SuperCharge-prestazioni-Esclusivo/dp/B0BJ7L5DX4?ufe=app_do%3Aamzn1.fos.9d4f9b77-768c-4a4e-94ad-33674c20ab35"
           >Acquista</a
@@ -33,7 +33,7 @@
       <div class="content--item">
         <img src="./assets/motorola_40_neo.png" alt="Motorola 40 Neo" />
         <p>Motorola 40 Neo <br />256GB | 12GB</p>
-        <p>369,00€</p>
+        <p onmouseover="prezzoChange()">369,00€</p>
         <a
           href="https://www.amazon.it/Motorola-Display-Mediatek-Dimensity-batteria/dp/B0CCW32ZH2?ufe=app_do%3Aamzn1.fos.d4b79b69-7fa3-49d4-9d2a-f8ac4bab3f93"
           >Acquista</a
@@ -42,7 +42,7 @@
       <div class="content--item">
         <img src="./assets/nokia_x30.jpg" alt="Nokia Atom Pro 2023" />
         <p>Nokia X30 <br />128GB | 6GB</p>
-        <p>399,99€</p>
+        <p onmouseover="prezzoChange()">399,99€</p>
         <a
           href="https://www.amazon.it/Nokia-Smartphone-Batteria-Versione-Aggiuntivo/dp/B0BH9B4H5H?ufe=app_do%3Aamzn1.fos.9d4f9b77-768c-4a4e-94ad-33674c20ab35"
           >Acquista</a
@@ -51,7 +51,7 @@
       <div class="content--item">
         <img src="./assets/oppo_reno10_5G.jpeg" alt="Oppo Reno 10 5G" />
         <p>Oppo Reno 10 <br />5G 256GB | 8GB</p>
-        <p>368,00€</p>
+        <p onmouseover="prezzoChange()">368,00€</p>
         <a
           href="https://www.amazon.it/OPPO-Reno10-Smartphone-Fotocamera-Batteria/dp/B0C8Z1KHKF?ufe=app_do%3Aamzn1.fos.9d4f9b77-768c-4a4e-94ad-33674c20ab35"
           >Acquista</a
@@ -60,14 +60,16 @@
       <div class="content--item">
         <img src="./assets/xiaomi_13_lite.jpg" alt="Xiaomi 13 Lite" />
         <p>Xiaomi 13 Lite <br />256GB | 8GB</p>
-        <p>383,00€</p>
+        <p onmouseover="prezzoChange()">383,00€</p>
         <a
           href="https://www.amazon.it/Xiaomi-Smartphone-fotocamera-posteriore-DotDisplay/dp/B0C1S3VRBL?ufe=app_do%3Aamzn1.fos.9d4f9b77-768c-4a4e-94ad-33674c20ab35"
           >Acquista</a
         >
       </div>
     </div>
-    <div class="separator"></div>
+    <div class="separator">
+      <button onclick="invisible()">Nascondi</button>
+    </div>
     <div class="comment">
       <label for="comment">Lascia un commento:</label><br />
       <textarea name="commenti" id="" cols="50" rows="10" maxlength="2000">
@@ -77,10 +79,11 @@
     </div>
     <br />
     <footer>
-      <p>Indirizzo: c.so Siracusa, 10 10136 Torino</p>
+      <p class="indirizzo">Indirizzo: c.so Siracusa, 10 10136 Torino</p>
       <p>Telefono: 389-95.25.989</p>
       <p>Email: info@myshoppinghome</p>
       <p>Sito web: https://www.myshoppinghome.it</p>
+      <button onclick="address()">Cambio Indirizzo</button>
     </footer>
     <script src="./s3p2-scaricabile.js"></script>
   </body>

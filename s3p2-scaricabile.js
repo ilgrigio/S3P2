@@ -20,13 +20,15 @@
 
 const titolo = function () {
   const h1 = document.querySelector("h1");
-  if (h1.onmouseover) {
-    h1.innerText = "Ciao!";
-  }
+  h1.innerText = "Ciao!";
 };
-titolo();
+const titleSelect = function () {
+  const h1 = document.querySelector("h1");
+  h1.innerText = "My Shopping Home";
+};
+// titolo();
 
-// ESERCIZIO 8: Scrivi una funzione per cambiare il colore di background della pagina
+// // ESERCIZIO 8: Scrivi una funzione per cambiare il colore di background della pagina
 
 const sfondo = function () {
   const color = document.querySelector("body");
@@ -34,8 +36,13 @@ const sfondo = function () {
 };
 sfondo();
 
-// ESERCIZIO 9: Scrivi una funzione per cambiare l'indirizzo presente nel futuro in un altro, fittizio
-// ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
+// // ESERCIZIO 9: Scrivi una funzione per cambiare l'indirizzo presente nel footer in un altro, fittizio
+
+const address = function () {
+  const indirizzo = document.querySelector(".indirizzo");
+  indirizzo.innerText = "Indirizzo: c.so Sebastopoli, 117 10137 Torino";
+};
+// // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
 const upperCase = function () {
   const upper = document.querySelectorAll("a");
   for (let i = 0; i < upper.length; i++) {
@@ -44,15 +51,25 @@ const upperCase = function () {
   // upper.style.toUpperCase();
 };
 upperCase();
-// ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le
-// immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
+// // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le
+// // immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
 
 const invisible = function () {
   const img = document.querySelectorAll(".content--item img");
   for (let i = 0; i < img.length; i++) {
-    img[i].classList.add("selezionato") = img[i].classList.toggle();
+    img[i].classList.toggle("selezionato");
   }
 };
-invisible();
-// ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in
-// uno differente, ogni volta che viene invocata
+// invisible();
+// // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in
+// // uno differente, ogni volta che viene invocata
+
+const prezzoChange = function () {
+  const change = document.querySelectorAll(".prezzo");
+  for (let i = 0; i < change.length; i++) {
+    change[i].style.color = `rgb(${Math.round(Math.random() * 255)},
+                                 ${Math.round(Math.random() * 255)},
+                                 ${Math.round(Math.random() * 255)} 
+                                )`;
+  }
+};

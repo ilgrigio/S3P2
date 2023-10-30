@@ -29,7 +29,7 @@ body {
   aspect-ratio: 1/1;
   width: 15vw;
   border-radius: 20px;
-  visibility: visible;
+  /* visibility: visible; */
 }
 
 .selezionato {
